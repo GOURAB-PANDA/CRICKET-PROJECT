@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <video autoplay loop  plays-inline class="background-clip">
+        <source
+          src="video/vecteezy_football-stadium-at-night-an-imaginary-stadium-is-modelled_13393841.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="content">
+        <div class="header">
+          <nav>
+            <span>B</span>AT <span>B</span>ALL <span>S</span>TUMP<span> G</span
+            >AME
+          </nav>
+        </div>
+        <div class="card">
+          <button
+            class="choice-button"
+            onclick="
+          let computerChoice = generateComputerChoice();
+          let resultMsg = getResult('Bat', computerChoice);
+          showResult('Bat', computerChoice, resultMsg);"
+          >
+            <video
+              src="video/vecteezy_cricket-player-in-action-vector-illustration_39064457.mp4"
+              class="choice-video"
+            ></video>
+          </button>
+        </div>
+
+        <div class="card">
+          <button class="choice-button" onclick="
+          computerChoice = generateComputerChoice();
+          resultMsg = getResult('Ball', computerChoice);
+          showResult('Ball', computerChoice, resultMsg);"
+          >
+            <video
+              src="video/WhatsApp Video 2024-05-28 at 9.44.20 PM.mp4"class="choice-video"></video>
+          </button>
+        </div>
+
+        <div class="card">
+          <button
+            class="choice-button"
+            onclick="
+          computerChoice = generateComputerChoice();
+          resultMsg = getResult('Stump', computerChoice);
+          showResult('Stump', computerChoice, resultMsg);"
+          >
+            <video src="video/WhatsApp Video 2024-05-28 at 9.44.27 PM.mp4" class="choice-video"></video>
+          </button>
+        </div>
+
+        <h3 id="user-move"></h3>
+        <h3 id="computer-move"></h3>
+        <h3 id="result"></h3>
+        <h3 id="score"></h3>
+
+        <button class="reset-button"
+          onclick="localStorage.clear(); resetScore();"><span>RESET</span>
+        </button>
+        <!-- <a href="#" class="reset-button"
+        onclick="localStorage.clear(); resetScore();"><span>RESET</span></a> -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
